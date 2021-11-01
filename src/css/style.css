@@ -1,0 +1,256 @@
+html {
+  font-size: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: black;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  width: 100%;
+}
+
+.header * {
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.header__nav {
+  padding: 1rem;
+}
+
+.header__nav .nav__elements {
+  padding: 0.9375rem 1rem;
+  font-family: "Open Sans", sans-serif;
+}
+
+.header__nav .logo {
+  font-size: 1.5rem;
+}
+
+.header__nav .links {
+  font-size: 1.25rem;
+}
+
+.header.light {
+  background-color: #e0e0e0;
+}
+
+.header.light .logo {
+  color: #363636;
+}
+
+.header.light .links {
+  color: #747474;
+}
+
+.header.light .links:hover {
+  color: #b4b4b4;
+  border-bottom: 3px solid gray;
+}
+
+.header.dark {
+  background-color: black;
+  border-bottom: 1px solid white;
+}
+
+.header.dark .logo {
+  color: #ffffff;
+}
+
+.header.dark .links {
+  color: #c4c4c4;
+}
+
+.header.dark .links:hover {
+  color: #ffffff;
+  border-bottom: 3px solid white;
+}
+
+.toggle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: none;
+}
+
+.toggle__container {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  position: relative;
+  width: 2.75rem;
+  height: 1.375rem;
+}
+
+.toggle__input {
+  opacity: 1;
+  margin: 0;
+  opacity: 0;
+  width: 2.75rem;
+  height: 1.375rem;
+}
+
+.toggle__background {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: #c4c4c4;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.6875rem;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  pointer-events: none;
+}
+
+.toggle__button {
+  position: absolute;
+  top: 0.1875rem;
+  bottom: 0.1875rem;
+  right: calc(100% - 20px);
+  left: 4px;
+  background: white;
+  width: 1.00812rem;
+  height: 1.00812rem;
+  border-radius: 0.6875rem;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  pointer-events: none;
+}
+
+.toggle .toggle__input:checked ~ .toggle__button {
+  left: calc(100% - 20px);
+  right: 4px;
+  background: #000000;
+}
+
+.toggle .toggle__input:checked ~ .toggle__background {
+  background: #ffffff;
+}
+
+.periodic-table {
+  -webkit-transform: scale(1.4);
+          transform: scale(1.4);
+  display: -ms-grid;
+  display: grid;
+  width: calc(44.89px * 19);
+  -ms-grid-columns: (2.80563rem)[18];
+      grid-template-columns: repeat(18, 2.80563rem);
+  -ms-grid-rows: (2.80563rem)[10];
+      grid-template-rows: repeat(10, 2.80563rem);
+  gap: 2px;
+  position: absolute;
+  top: 175px;
+  left: 200px;
+  width: auto;
+}
+
+.element {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0;
+  position: relative;
+  width: 2.80563rem;
+  height: 2.80563rem;
+}
+
+.element * {
+  position: absolute;
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  width: 100%;
+  text-align: center;
+}
+
+.element__number {
+  font-size: 0.53125rem;
+  top: 0.1875rem;
+  left: 0.1875rem;
+  text-align: left;
+}
+
+.element__symbol {
+  font-size: 0.8125rem;
+  height: 1.20875rem;
+  bottom: 0.9375rem;
+}
+
+.element__name {
+  font-size: 0.5rem;
+  height: 0.625rem;
+  bottom: 0.375rem;
+}
+
+.element__mass {
+  font-size: 0.46875rem;
+  height: 0.625rem;
+  bottom: -0.125rem;
+}
+
+.Praseodymium .element__name {
+  font-size: 0.39375rem;
+}
+
+.Rutherfordium .element__name {
+  font-size: 0.41875rem;
+}
+
+.Darmstadtium .element__name {
+  font-size: 0.43125rem;
+}
+
+.Roentgenium .element__name,
+.Molybdenum .element__name,
+.Mendelevium .element__name {
+  font-size: 0.46875rem;
+}
+
+.S-Block {
+  background: rgba(0, 255, 0, 0.8);
+}
+
+.P-Block {
+  background: rgba(255, 255, 0, 0.8);
+}
+
+.D-Block {
+  background: rgba(255, 0, 0, 0.8);
+}
+
+.F-Block {
+  background: rgba(0, 0, 255, 0.8);
+}
+/*# sourceMappingURL=style.css.map */

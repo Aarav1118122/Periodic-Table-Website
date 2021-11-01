@@ -1,0 +1,56 @@
+@import "Variables";
+
+.toggle {
+  display: flex;
+  align-items: center;
+  border: none;
+  &__container {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    position: relative;
+    width: toRem(44);
+    height: toRem(22);
+  }
+  &__input {
+    opacity: 1;
+    margin: 0;
+    opacity: 0;
+    width: toRem(44);
+    height: toRem(22);
+  }
+  &__background {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: $toggle-background-light;
+    width: 100%;
+    height: 100%;
+    border-radius: toRem(11);
+    transition: all 200ms ease-in-out;
+    pointer-events: none;
+  }
+  &__button {
+    position: absolute;
+    top: toRem(3);
+    bottom: toRem(3);
+    right: calc(100% - 20px);
+    left: 4px;
+    background: $toggle-button-light;
+    width: toRem(16.13);
+    height: toRem(16.13);
+    border-radius: toRem(11);
+    transition: all 200ms ease-in-out;
+    pointer-events: none;
+  }
+  .toggle__input:checked ~ .toggle__button {
+    left: calc(100% - 20px);
+    right: 4px;
+    background: $toggle-button-dark;
+  }
+  .toggle__input:checked ~ .toggle__background {
+    background: $toggle-background-dark;
+  }
+}

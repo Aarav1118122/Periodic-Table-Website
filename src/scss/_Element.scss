@@ -1,0 +1,74 @@
+@import "Variables";
+
+.element {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  position: relative;
+  width: toRem(44.89);
+  height: toRem(44.89);
+  * {
+    position: absolute;
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    width: 100%;
+    text-align: center;
+  }
+  &__number {
+    font-size: toRem(8.5);
+    top: toRem(3);
+    left: toRem(3);
+    text-align: left;
+  }
+  &__symbol {
+    font-size: toRem(13);
+    height: toRem(19.34);
+    bottom: toRem(15);
+  }
+  &__name {
+    font-size: toRem(8);
+    height: toRem(10);
+    bottom: toRem(6);
+  }
+  &__mass {
+    font-size: toRem(7.5);
+    height: toRem(10);
+    bottom: toRem(-2);
+  }
+}
+.Praseodymium {
+  .element__name {
+    font-size: toRem(6.3);
+  }
+}
+.Rutherfordium {
+  .element__name {
+    font-size: toRem(6.7);
+  }
+}
+.Darmstadtium {
+  .element__name {
+    font-size: toRem(6.9);
+  }
+}
+.Roentgenium,
+.Molybdenum,
+.Mendelevium {
+  .element__name {
+    font-size: toRem(7.5);
+  }
+}
+
+.S-Block {
+  background: $S-block-background;
+}
+.P-Block {
+  background: $P-block-background;
+}
+.D-Block {
+  background: $D-block-background;
+}
+
+.F-Block {
+  background: $F-block-background;
+}

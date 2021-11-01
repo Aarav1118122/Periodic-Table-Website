@@ -1,0 +1,12 @@
+.periodic-table {
+  transform: scale(1.4);
+  display: grid;
+  width: calc(44.89px * 19);
+  grid-template-columns: repeat(18, toRem(44.89));
+  grid-template-rows: repeat(10, toRem(44.89));
+  gap: 2px;
+  position: absolute;
+  top: 175px;
+  left: 200px;
+  width: auto;
+}
